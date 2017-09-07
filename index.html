@@ -2,16 +2,25 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<link rel="stylesheet" href="css/left-css/left-css.css" />
+		<link rel="stylesheet" type="text/css" href="css/left-css/left-css.css" />
+		<link rel="stylesheet" type="text/css" href="css/left-css/font-awesome.css">
+		<link rel="stylesheet" type="text/css" href="css/left-css/font-awesome.min.css"/>
+		<link rel="stylesheet" href="css/left-css/bootstrap.min.css" />
+		
+		<link rel="stylesheet" href="css/left-css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/left-css/demo.css"/>
+		<link rel="stylesheet" type="text/css" href="css/left-css/component.css"/>
 		<title>个人博客</title>
 	</head>
 	<body>
 		<div class="left">
+			<div class="blete-img-overlay"></div>
 			<div class="left-box">
 				<div class="github">
 					<div class="bg-git">
 						<canvas id="myCanvas" width="200" height="120"></canvas>
-						<img alt="githublogal" src="img/left-img/github3.png">
+						<img class="gitbody" alt="githublogal" src="img/left-img/3.png">
+						<img class="gittail" alt="tail" src="img/left-img/2.png">
 					</div>
 					
 						
@@ -20,35 +29,55 @@
 					<div class="name">
 						<img src="img/left-img/b10.jpg"/>
 					</div>
-					<div class="intros">
+					<div class="description">
+						<h5 class="name-blog"><a>王大鱼儿</a></h5>
 							<span id="">
 								如果我爱你,绝不向攀岩的凌霄花
 							</span>
 						</div>
 						<div class="function">
-							
+							<div class="container">
+								<section class="section section--menu" id="Viola">
+									<span class="link-copy"></span>
+									<nav class="menu menu--viola">
+										<ul class="menu__list">
+											<li class="menu__item menu__item--current"><a href="#" class="menu__link">学无止境</a></li>
+											<li class="menu__item"><a href="#" class="menu__link">技术文章</a></li>
+											<li class="menu__item"><a href="#" class="menu__link">碎言碎语</a></li>
+											<li class="menu__item"><a href="#" class="menu__link">我的故事</a></li>
+										</ul>
+									</nav>
+								</section>
+							</div>
 						</div>
 				</div>
 				<div class="content-down">
+					<ul>
+						<li class="circle email">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</li>
+						<li class="circle git">
+							<a href="https://github.com/AlittleFenQing" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+						</li>
+						<li class="circle qq">
+							<i class="fa fa-qq" aria-hidden="true"></i>
+						</li>
+						<li class="circle weixin">
+							<i class="fa fa-weixin" aria-hidden="true"></i>
+						</li>
+						<li class="circle weibo">
+							<i class="fa fa-weibo" aria-hidden="true"></i>
+						</li>
+						<li class="circle user">
+							<i class="fa fa-user" aria-hidden="true"></i>
+						</li>
+					</ul>
 					
 				</div>
 			</div>
 		</div>
-		<script type="text/javascript">
-			//获取canvas容器
-var can = document.getElementById('myCanvas');
-//创建一个画布
-var ctx = can.getContext('2d');
-var draw = function(x1, y1, x2, y2, x3, y3, color, type) {
-    ctx.beginPath();
-    ctx.moveTo(x1, y1);
-    ctx.lineTo(x2, y2);
-    ctx.lineTo(x3, y3);
-    ctx[type + 'Style'] = color;
-    ctx.closePath();
-    ctx[type]();
-}
-draw(0,0,120,0,0,120,'rgba(255,255,255,0.3)','fill');
-</script>
+		<script src="js/classie.js"></script>
+		<script src="js/clipboard.min.js"></script>
+		<script type="text/javascript" src="js/nav.js" ></script>
 	</body>
 </html>
