@@ -7,10 +7,8 @@
 	width: 20%;
 	background: url(../../img/left-img/789.jpg) repeat;
 	background-size:cover;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
+	position: fixed;
+	margin-left: -20%;
 }
 
 .left-box{
@@ -21,7 +19,7 @@
 .blete-img-overlay{
 	position: absolute;
 	background: url(../../img/left-img/pattern.png)repeat, rgba(211,206,204,0.01);
-	width: 20%;
+	width: 100%;
 	height: 100%;
 	top: 0;
 	bottom: 0;
@@ -47,6 +45,190 @@
 	left: 18px;
 	opacity: 0.8;
 }
+
+.btn-nav {
+  position: fixed;
+  top: 0px;
+  left: 260px;
+  background: rgba(105,103,105,0.5);
+  border: none;
+  padding: 8px;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+  cursor: pointer;
+  z-index: 99999;
+  
+}
+
+.btn-nav:focus {
+  outline: 0;
+}
+
+.icon-bar {
+  display: block;
+  margin: 5px 0;
+  width: 35px;
+  height: 5px;
+  background-color: rgba(255,255,255,0.7);
+}
+
+.btn-nav:hover .icon-bar {
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+  background-color: #d94f5c;
+}
+
+
+
+.animated {
+  display: block;
+  margin: 0 auto;
+}
+
+.animated:hover .icon-bar,
+.animated:focus .icon-bar{
+  background-color: #FCA311;
+}
+
+.animated:focus {
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.middle {
+  margin: 0 auto;
+}
+
+.icon-bar {
+  -webkit-transition: all .7s ease;
+  -moz-transition: all .7s ease;
+  -ms-transition: all .7s ease;
+  -o-transition: all .7s ease;
+  transition: all .7s ease;
+  z-index: 999999;
+}
+
+.animated .icon-bar {
+  z-index: 999999;
+  background-color: #FCA311;
+}
+
+.animated .top {
+  -webkit-transform: translateY(10px) rotateZ(45deg);
+  -moz-transform: translateY(10px) rotateZ(45deg);
+  -ms-transform: translateY(10px) rotateZ(45deg);
+  -o-transform: translateY(10px) rotateZ(45deg);
+  transform: translateY(10px) rotateZ(45deg);
+}
+
+.animated .bottom {
+  -webkit-transform: translateY(-11px) rotateZ(-45deg);
+  -moz-transform: translateY(-11px) rotateZ(-45deg);
+  -ms-transform: translateY(-11px) rotateZ(-45deg);
+  -o-transform: translateY(-11px) rotateZ(-45deg);
+  transform: translateY(-11px) rotateZ(-45deg);
+}
+
+.animated .middle {
+  width: 0;
+}
+
+@keyframes showNav {
+  from {
+    left: 20%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@-webkit-keyframes showNav {
+   from {
+    left: 20%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@-moz-keyframes showNav {
+   from {
+    left: 20%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@-o-keyframes showNav {
+  from {
+    left: 20%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+.showNav {
+  -webkit-animation: showNav 1s ease forwards;
+  -moz-animation: showNav 1s ease forwards;
+  -o-animation: showNav 1s ease forwards;
+  animation: showNav 1s ease forwards;
+}
+
+@keyframes hideNav {
+   from {
+    left: 0;
+  }
+  to {
+    left: 20%;
+  }
+}
+
+@-webkit-keyframes hideNav {
+   from {
+    left: 0;
+  }
+  to {
+    left: 20%;
+  }
+}
+
+@-moz-keyframes hideNav {
+   from {
+    left: 0;
+  }
+  to {
+    left: 20%;
+  }
+}
+
+@-o-keyframes hideNav {
+  from {
+    left: 0;
+  }
+  to {
+    left: 20%;
+  }
+}
+
+.hideNav {
+  -webkit-animation: hideNav 1s ease forwards;
+  -moz-animation: hideNav 1s ease forwards;
+  -o-animation: hideNav 1s ease forwards;
+  animation: hideNav 1s ease forwards;
+}
+
+.hidden {
+  display: none;
+}
+
 .gittail{
 	opacity: 0.7;
 	width: 15px;
@@ -148,6 +330,7 @@ animation: myfirst 0.5s;
 	font-size: 13px;
 	font-weight: 400;
 	display: block;
+	margin-top: 30px;
 	text-align: center;
 }
 .function{

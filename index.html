@@ -12,8 +12,16 @@
 		<link rel="stylesheet" type="text/css" href="css/left-css/component.css"/>
 		<title>个人博客</title>
 	</head>
-	<body>
-		<div class="left">
+	<body><div class="maneu-button">
+						<div class="nav">
+							<button class="btn-nav">
+								<span class="icon-bar top"></span>
+							    <span class="icon-bar middle"></span>
+							    <span class="icon-bar bottom"></span>
+							 </button>
+							</div>	
+					</div>
+		<div class="left showNav hidden">
 			<div class="blete-img-overlay"></div>
 			<div class="left-box">
 				<div class="github">
@@ -79,5 +87,14 @@
 		<script src="js/classie.js"></script>
 		<script src="js/clipboard.min.js"></script>
 		<script type="text/javascript" src="js/nav.js" ></script>
+		<script type="text/javascript" src="js/jquery-2.1.1.min.js" ></script>
+		<script type="text/javascript">
+		$(window).load(function () {
+	    $('.btn-nav').on('click tap', function () {
+	        $('.left').toggleClass('showNav hideNav').removeClass('hidden');
+	        $(this).toggleClass('animated');
+	    });
+	});
+		</script>
 	</body>
 </html>
