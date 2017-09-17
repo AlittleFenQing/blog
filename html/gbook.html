@@ -32,7 +32,19 @@
     <div class="message" style="margin-top: 30px;">
 	        <div class="message-box">
 	        	<div class="login">
-	        		<a>登录</a>
+	        		<a hhref="#">登录</a>
+	        	</div>
+	        	<div class="left-right" >
+	        		
+	        		<div class="line-mid">
+	        			<img src="images/border-top.png">
+	        		</div>
+	        		<div class="line-right"></div>
+	        		<div class="area-textarea-w">
+	        			<textarea class="text-send" cols="50" rows="5" id="textarea" onKeyDown="textdown(event)"
+						    onKeyUp="textup()" onfocus="if(value=='既然来了就说点...'){value=''}"
+						    onblur="if (value ==''){value='既然来了就说点...'}">既然来了就说点...</textarea>
+	        		</div>
 	        	</div>
 	        </div>
 	</div>
@@ -48,5 +60,6 @@
 		})();
 	};
 </script>
+<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
 </body>
 </html>
