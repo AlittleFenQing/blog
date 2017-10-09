@@ -115,7 +115,6 @@
     -ms-box-shadow: none;
     box-shadow: none;
     border: none;
-    background: url(../images/foots.png) no-repeat 300px 0px;
     background-size:250px 90px;
     opacity: 0.6;
 
@@ -125,4 +124,9 @@ textarea{
     height: 70px;
 	outline: none;
 	vertical-align:top;
+}
+.post-btn{
+	opacity: 0.5;
+	float: right;
+	margin-top: 15px;
 }
