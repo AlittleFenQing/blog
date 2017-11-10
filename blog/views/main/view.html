@@ -1,0 +1,146 @@
+{%extends 'layout.html'%}
+
+{%block content%}
+<article>
+    <div class="container">
+        <h2 class="ctitle"><b>学无止境</b> <span>不要轻易放弃。学习成长的路上，我们长路漫漫，只因学无止境。</span></h2>
+        <div class="readBox cbp_tmlabel">
+            <h1>{{content.title}}</h1>
+            <p class="colDefault">
+                作者:<span class="cloInfon">{{content.user.username}}</span>
+                时间:<span class="cloInfon">{{content.addTime|date('Y-m-d H:i:s',-8*60)}}</span>
+                阅读:<span class="cloInfon">{{content.view}}</span>
+                评论:<span class="cloInfon">{{content.comment.length}}</span>
+            </p>
+            <dfn><p>{{content.content}}</p></dfn>
+        </div>
+        <div class="message" style="margin-top: 30px;">
+            <div class="message-box">
+                {% if userInfo._id %}
+                <div class="login" id="userInfo">
+                    <span><img src="/public/images/2.jpg"></span>
+                    <span id="id-name">{{userInfo.username}}</span>
+                    {% if userInfo.isAdmin %}
+                    <span id="welcome-admin">你好，管理员！</span>
+                    <span id="out-admin"><a href="/admin">[进入管理]</a></span>
+                    <span id="out-self"><a id="logout">[退出]</a></span>
+                    {% else %}
+                    <span id="welcome-other">你好，欢迎光临我的博客！</span>
+                    <span id="out-other"><a id="logout">[退出]</a></span>
+                    {% endif %}
+
+                </div>
+                <div class="left-right" >
+                    <div class="line-mid">
+                        <img src="/public/images/border-top.png">
+                    </div>
+                    <div class="line-right"></div>
+                    <div class="area-textarea-w">
+							<textarea class="text-send" cols="50" rows="5" id="messageContent"
+                                      onfocus="if(value=='  既然来了就说点...'){value='   '}"
+                                      onblur="if (value ==''){value='  既然来了就说点...'}">  既然来了就说点...</textarea>
+
+                    </div>
+                </div>
+                <div class="saying">
+                    <div class="send-box">
+                        <input type="hidden" id="contentId" value="{{content.id}}"/>
+                        <button id="messageBtn" class="submit">畅言一下</button>
+                    </div>
+                </div>
+                {% else %}
+                <div class="login">
+                    <a href="login-index">登录</a>
+                </div>
+                <div class="left-right" >
+                    <div class="line-mid">
+                        <img src="/public/images/border-top.png">
+                    </div>
+                    <div class="line-right"></div>
+                    <div class="area-textarea-w">
+							<textarea class="text-send" cols="50" rows="5" id="messageContent"
+                                       onfocus="if(value=='  既然来了就说点...'){value='   '}"
+                                      onblur="if (value ==''){value='  既然来了就说点...'}">  既然来了就说点...</textarea>
+
+                    </div>
+                </div>
+                <div class="saying">
+
+                    <div class="send-box">
+                        <input type="hidden" id="contentId" value="{{content.id}}"/>
+                        <button id="messageBtn" class="submit">畅言一下</button>
+                    </div>
+                </div>
+
+                {% endif%}
+                <div class="comm-line">
+                    <div class="comment-world">
+                        评论
+                    </div>
+                    {%if userInfo._id%}
+                    <div class="comment">
+	        		<span id="sum-person">一共有
+	        			<span id="sum-comments"></span>
+                        条评论
+	        		</span>
+
+                    </div>
+                    {%else%}
+                    <div class="comment">
+	        		<span id="sum-person">
+	        			<span>在留言</span>
+	        		</span>
+                        <span id="sum-comment">先登录</span>
+                    </div>
+                    {%endif%}
+                </div>
+                <div class="conment">
+                    <div class="newconment">
+                        <div class="bloder-line"></div>
+                        <span>最新评论</span>
+                    </div>
+                    <div id="respond-list">
+                        {% if userInfo._id%}
+                        <div class="box clearfix">
+                            <div class="content">
+
+                            </div>
+                        </div>
+                        {%else%}
+                        <div class="box clearfix">
+                            <div class="content">
+                                <div class="comment-content">
+                                    <p class="comment-text"><span class="user">老鹰：</span>我也想去三亚。</p>
+                                    <p class="comment-time">
+                                        2014-02-19 14:36
+                                        <a href="javascript:;" class="comment-praise" total="0" my="0">赞</a>
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                        {%endif%}
+                    </div>
+                </div>
+            </div>
+            <div class="view-page">
+                <ul class="page-ul">
+
+                    <li class="prevous"><a href="">上一页</a></li>
+                    {% if pages>0%}
+                    <li class="pages">{{page}} / {{pages}}</li>
+                    {%else%}
+                    <li class="pages">当前分类没有内容</li>
+                    {%endif%}
+
+                    <li class="next"><a href="">下一页</a></li>
+
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</article>
+<script src="/public/js/jquery-2.1.1.min.js"></script>
+<script src="/public/js/comment.js"></script>
+{%endblock%}

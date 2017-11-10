@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html >
+<head>
+<meta charset="UTF-8">
+<title>Sign Up Login</title>
+<link rel="stylesheet" href="/public/css/login-style.css">
+<link rel="stylesheet" href="/public/css/font-awesome.min.css">
+
+
+</head>
+<body>
+<div class="cotn_principal">
+  <div class="cont_centrar">
+    <div class="cont_login">
+      <div class="cont_info_log_sign_up">
+        <div class="col_md_login">
+          <div class="cont_ba_opcitiy">
+            <h2>LOGIN</h2>
+            <p>已有账号，并进行登录.</p>
+            <button class="btn_login" onclick="cambiar_login()">LOGIN</button>
+          </div>
+        </div>
+        <div class="col_md_sign_up">
+          <div class="cont_ba_opcitiy">
+            <h2>SIGN UP</h2>
+            <p>注册新的账号.</p>
+            <button class="btn_sign_up" onclick="cambiar_sign_up()">SIGN UP</button>
+          </div>
+        </div>
+      </div>
+      <div class="cont_back_info">
+        <div class="cont_img_back_grey"> <img src="/public/images/po.jpg" alt="" /> </div>
+      </div>
+      <div class="cont_forms" >
+        <div class="cont_img_back_"> <img src="/public/images/po.jpg" alt="" /> </div>
+        <div class="cont_form_login" id="loginBox"> <a href="index" onclick="ocultar_login_sign_up()" ><i class="fa fa-arrow-left"></i></a>
+          <h2>LOGIN</h2>
+          <input type="text" name="username" placeholder="User" />
+          <input type="password" name="password" placeholder="Password" />
+          <button href="" class="btn_login" onclick="cambiar_login()">LOGIN</button>
+          <p class="colWarning textCenter"></p>
+        </div>
+        <div class="cont_form_sign_up" id="register"> <a href="#" onclick="ocultar_login_sign_up()"><i class="fa fa-arrow-left"></i></a>
+          <h2>SIGN UP</h2>
+          <input type="text" name="username" placeholder="User" />
+          <input type="password" name="password" placeholder="Password" />
+          <input type="password" name="repassword" placeholder="Confirm Password" />
+          <button class="btn_sign_up" onclick="cambiar_sign_up()">SIGN UP</button>
+          <p class="colWarning textCenter"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="large-header" style="position: fixed;bottom: 0px;"><canvas id="demo-canvas"></canvas></div>
+<script src="/public/js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/public/js/downpaopao.js" type="text/javascript" charset="utf-8"></script>
+<script src="/public/js/login-index.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+</html>
